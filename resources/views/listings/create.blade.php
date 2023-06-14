@@ -16,15 +16,7 @@
         fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
       <form method="POST" action="/listings">
         @csrf
-        <div class="mb-6">
-          <label for="fullName" class="block text-xs text-dark">Full Name*</label>
-          <input type="text" name="fullName" placeholder="Adam Gelius" class="
-              w-full
-              border-0 border-b border-[#f1f1f1]
-              focus:border-primary focus:outline-none
-              py-4
-            ">
-        </div>
+
         <div class="mb-6">
           <label for="email" class="block text-xs text-dark">Email*</label>
           <input type="email" name="email" placeholder="example@yourmail.com" class="
@@ -33,26 +25,99 @@
               focus:border-primary focus:outline-none
               py-4
             ">
+
+            @error('email')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
         </div>
+
         <div class="mb-6">
-          <label for="phone" class="block text-xs text-dark">Phone*</label>
-          <input type="text" name="phone" placeholder="+885 1254 5211 552" class="
+          <label for="company" class="block text-xs text-dark">Company*</label>
+          <input type="text" name="company" placeholder="Company Name" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
               py-4
             ">
+
+            @error('company')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
         </div>
+
         <div class="mb-6">
-          <label for="message" class="block text-xs text-dark">Message*</label>
-          <textarea name="message" rows="1" placeholder="type your message here" class="
+          <label for="title" class="block text-xs text-dark">Job Title*</label>
+          <input type="text" name="title" placeholder="Job Title" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
               py-4
-              resize-none
-            "></textarea>
+            ">
+
+            @error('title')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
         </div>
+
+        <div class="mb-6">
+          <label for="location" class="block text-xs text-dark">Location*</label>
+          <input type="text" name="location" placeholder="Location" class="
+              w-full
+              border-0 border-b border-[#f1f1f1]
+              focus:border-primary focus:outline-none
+              py-4
+            ">
+
+            @error('location')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
+        </div>
+        
+        <div class="mb-6">
+          <label for="website" class="block text-xs text-dark">Website*</label>
+          <input type="text" name="website" placeholder="Website" class="
+              w-full
+              border-0 border-b border-[#f1f1f1]
+              focus:border-primary focus:outline-none
+              py-4
+            ">
+
+            @error('website')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
+          <label for="tags" class="block text-xs text-dark">Tags*</label>
+          <input type="text" name="tags" placeholder="Tags" class="
+              w-full
+              border-0 border-b border-[#f1f1f1]
+              focus:border-primary focus:outline-none
+              py-4
+            ">
+
+            @error('tags')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
+          <label for="description" class="block text-xs text-dark">Description*</label>
+          <input type="text" name="description" placeholder="Description" class="
+              w-full
+              border-0 border-b border-[#f1f1f1]
+              focus:border-primary focus:outline-none
+              py-4
+            ">
+
+            @error('description')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
+        </div>
+        
+       
+
+
         <div class="mb-0">
           <button type="submit" class="
               inline-flex

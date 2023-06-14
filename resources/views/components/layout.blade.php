@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="/assets/css/animate.css" />
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    <link rel="stylesheet" href="{{asset('/assets/css/app.css')}}">
 
     <!-- ==== WOW JS ==== -->
     <script src="/assets/js/wow.min.js"></script>
@@ -118,9 +119,9 @@
                   </li>
                   <li class="relative group">
                     <a
-                      href="#about"
+                      href="/listings/create"
                       class="
-                        ud-menu-scroll
+                        
                         text-base text-dark
                         lg:text-white
                         lg:group-hover:opacity-70
@@ -134,7 +135,7 @@
                         xl:ml-12
                       "
                     >
-                      About
+                      Create Post
                     </a>
                   </li>
                   <li class="relative group">
