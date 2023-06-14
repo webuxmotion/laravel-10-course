@@ -1,6 +1,8 @@
 <x-layout>
 
   <x-banner-section text="Blog"></x-banner-section>
+  
+  @include('partials._search')
 
   <!-- ====== Blog Section Start -->
   <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
