@@ -41,7 +41,7 @@
           <div class="px-4 w-60 max-w-full">
             <a href="/" class="navbar-logo w-full block py-5">
               <img
-                src={{asset('/assets/images/logo/logo-white.svg')}}
+                src={{asset('assets/images/logo/logo-white.svg')}}
                 alt="logo"
                 class="w-full header-logo"
               />
@@ -420,7 +420,7 @@
             class="inline-block max-w-[160px] mb-6"
           >
             <img
-              src="/assets/images/logo/logo-white.svg"
+              src={{asset('assets/images/logo/logo-white.svg')}}
               alt="logo"
               class="max-w-full"
             />
