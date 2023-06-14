@@ -1,29 +1,25 @@
-@extends('layout')
+<x-layout>
 
-@section('content')
+  <x-banner-section text="Blog"></x-banner-section>
 
-<x-banner-section text="Blog"></x-banner-section>
+  <!-- ====== Blog Section Start -->
+  <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
+    <div class="container">
+      <div class="flex flex-wrap -mx-4">
 
-<!-- ====== Blog Section Start -->
-<section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
-  <div class="container">
-    <div class="flex flex-wrap -mx-4">
+        @unless(count($listings) == 0)
 
+          @foreach($listings as $listing)
+            <x-listing-card :listing="$listing"></x-listing-card>
+          @endforeach
 
-@unless(count($listings) == 0)
+        @else
+          <p>No listings found</p>
+        @endunless
 
-@foreach($listings as $listing)
+      </div>
+    </div>
+  </section>
+  <!-- ====== Blog Section End -->
 
-<x-listing-card :listing="$listing"></x-listing-card>
-  
-@endforeach
-
-@else
-  <p>No listings found</p>
-@endunless
-
-</div>
-</div>
-</section>
-
-@endsection
+</x-layout>

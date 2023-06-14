@@ -403,7 +403,7 @@
     <!-- ====== Navbar Section End -->
 
 
-  @yield('content')
+  {{$slot}}
 
 
   <!-- ====== Footer Section Start -->
