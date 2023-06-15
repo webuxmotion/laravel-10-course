@@ -14,7 +14,7 @@
         lg:py-12 lg:px-10
         wow
         fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
-      <form method="POST" action="/listings">
+      <form method="POST" action="/listings" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-6">
@@ -98,6 +98,20 @@
         </div>
 
         <div class="mb-6">
+          <label for="logo" class="block text-xs text-dark">Company Logo</label>
+          <input 
+            type="file" name="logo" placeholder="Logo" class="
+              w-full
+              border-0 border-b border-[#f1f1f1]
+              focus:border-primary focus:outline-none
+              py-4
+            ">
+            @error('logo')
+              <p class="danger-text">{{$message}}</p>
+            @enderror
+        </div>
+
+        <div class="mb-6">
           <label for="tags" class="block text-xs text-dark">Tags*</label>
           <input 
             value="{{old('tags')}}"
@@ -127,9 +141,6 @@
               <p class="danger-text">{{$message}}</p>
             @enderror
         </div>
-        
-       
-
 
         <div class="mb-0">
           <button type="submit" class="
