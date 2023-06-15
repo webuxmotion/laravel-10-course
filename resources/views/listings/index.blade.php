@@ -20,6 +20,9 @@
         @endunless
 
       </div>
+      <div class="p-4">
+        {{$listings->links()}}
+      </div>
     </div>
   </section>
   <!-- ====== Blog Section End -->
