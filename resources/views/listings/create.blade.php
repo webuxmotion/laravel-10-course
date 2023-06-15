@@ -19,7 +19,9 @@
 
         <div class="mb-6">
           <label for="email" class="block text-xs text-dark">Email*</label>
-          <input type="email" name="email" placeholder="example@yourmail.com" class="
+          <input 
+            value="{{old('email')}}"
+            type="email" name="email" placeholder="example@yourmail.com" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
@@ -33,7 +35,9 @@
 
         <div class="mb-6">
           <label for="company" class="block text-xs text-dark">Company*</label>
-          <input type="text" name="company" placeholder="Company Name" class="
+          <input 
+            value="{{old('company')}}"
+            type="text" name="company" placeholder="Company Name" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
@@ -47,7 +51,9 @@
 
         <div class="mb-6">
           <label for="title" class="block text-xs text-dark">Job Title*</label>
-          <input type="text" name="title" placeholder="Job Title" class="
+          <input 
+            value="{{old('title')}}"
+            type="text" name="title" placeholder="Job Title" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
@@ -61,7 +67,9 @@
 
         <div class="mb-6">
           <label for="location" class="block text-xs text-dark">Location*</label>
-          <input type="text" name="location" placeholder="Location" class="
+          <input 
+            value="{{old('location')}}"
+            type="text" name="location" placeholder="Location" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
@@ -75,7 +83,9 @@
         
         <div class="mb-6">
           <label for="website" class="block text-xs text-dark">Website*</label>
-          <input type="text" name="website" placeholder="Website" class="
+          <input 
+            value="{{old('website')}}"
+            type="text" name="website" placeholder="Website" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
@@ -89,7 +99,9 @@
 
         <div class="mb-6">
           <label for="tags" class="block text-xs text-dark">Tags*</label>
-          <input type="text" name="tags" placeholder="Tags" class="
+          <input 
+            value="{{old('tags')}}"
+            type="text" name="tags" placeholder="Tags" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
@@ -103,12 +115,13 @@
 
         <div class="mb-6">
           <label for="description" class="block text-xs text-dark">Description*</label>
-          <input type="text" name="description" placeholder="Description" class="
+          <textarea 
+            type="text" name="description" placeholder="Description" class="
               w-full
               border-0 border-b border-[#f1f1f1]
               focus:border-primary focus:outline-none
               py-4
-            ">
+            ">{{old('description')}}</textarea>
 
             @error('description')
               <p class="danger-text">{{$message}}</p>
