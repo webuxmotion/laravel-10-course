@@ -366,38 +366,11 @@
               </nav>
             </div>
             <div class="sm:flex justify-end hidden pr-16 lg:pr-0">
-              <a
-                href="signin.html"
-                class="
-                  text-base
-                  font-medium
-                  text-white
-                  hover:opacity-70
-                  py-3
-                  px-7
-                  loginBtn
-                "
-              >
-                Sign In
-              </a>
-              <a
-                href="signup.html"
-                class="
-                  text-base
-                  font-medium
-                  text-white
-                  bg-white bg-opacity-20
-                  rounded-lg
-                  py-3
-                  px-6
-                  hover:bg-opacity-100 hover:text-dark
-                  signUpBtn
-                  duration-300
-                  ease-in-out
-                "
-              >
-                Sign Up
-              </a>
+              @auth
+                <p>Welcome {{auth()->user()->name}}</p>
+              @else
+                @include('partials._login-register-links')
+              @endauth
             </div>
           </div>
         </div>
