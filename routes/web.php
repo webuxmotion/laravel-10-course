@@ -21,3 +21,5 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 Route::get('/register', [UserController::class, 'create']);
 
 Route::post('/users', [UserController::class, 'store']);
+
+Route::post('/logout', [UserController::class, 'logout']);

@@ -368,6 +368,10 @@
             <div class="sm:flex justify-end hidden pr-16 lg:pr-0">
               @auth
                 <p>Welcome {{auth()->user()->name}}</p>
+                <form method="POST" action="/logout">
+                  @csrf
+                  <button type="submit">Logout</button>
+                </form>
               @else
                 @include('partials._login-register-links')
               @endauth
