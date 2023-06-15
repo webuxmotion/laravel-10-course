@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
     <link rel="stylesheet" href="{{asset('/assets/css/app.css')}}">
 
+    <script src="//unpkg.com/alpinejs" defer></script>
     <!-- ==== WOW JS ==== -->
     <script src="/assets/js/wow.min.js"></script>
     <script>
@@ -23,6 +24,7 @@
     </script>
   </head>
   <body>
+    <x-flash-message />
     <!-- ====== Navbar Section Start -->
     <div
       class="
