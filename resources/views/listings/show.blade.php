@@ -8,5 +8,7 @@
   <x-listing-tags :tagsCsv="$listing->tags" />
 
   <p>{{$listing->description}}</p>
+
+  <a href="/listings/{{$listing->id}}/edit">Edit</a>
   
 </x-layout>
