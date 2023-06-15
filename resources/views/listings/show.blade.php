@@ -10,5 +10,11 @@
   <p>{{$listing->description}}</p>
 
   <a href="/listings/{{$listing->id}}/edit">Edit</a>
+
+  <form method="POST" action="/listings/{{$listing->id}}">
+    @csrf
+    @method('DELETE')
+    <button>Delete</button>
+  </form>
   
 </x-layout>
