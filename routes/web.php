@@ -36,3 +36,6 @@ Route::get('/login', [UserController::class, 'login'])
   ->middleware('guest');
 
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+Route::get('/manage-listing', [ListingController::class, 'manage'])
+  ->middleware('auth');
